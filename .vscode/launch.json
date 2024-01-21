@@ -1,0 +1,33 @@
+{
+  "configurations": [{
+      "type": "node",
+      "name": "Debug Node",
+      "request": "launch",
+      "outputCapture": "std",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/bin/www"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha Test All",
+      "program": "${workspaceFolder}/node_modules/.bin/mocha",
+      "args": [
+        "--colors",
+        "${workspaceFolder}/test"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha Test Current File",
+      "program": "${workspaceFolder}/node_modules/.bin/mocha",
+      "args": [
+        "--colors",
+        "${file}"
+      ]
+    }
+  ]
+}
